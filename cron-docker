@@ -1,4 +1,0 @@
- * * * * * /usr/bin/curator >> /var/log/cron.log 2>&1
-*/1 * * * * /usr/bin/aws s3 cp s3://webgames-emr-output/cron /etc/cron.d/cron-jobs
-
-# Don't remove the empty line at the end of this file. It is required to run the cron job
