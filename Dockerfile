@@ -24,6 +24,9 @@ RUN chmod +x /opt/restore_logs.sh
 ADD curator-runner.sh /opt/
 RUN chmod +x /opt/curator-runner.sh
 
+ADD script-runner.sh /opt/
+RUN chmod +x /opt/script-runner.sh
+
 WORKDIR /opt
 
 CMD ["./init-cron.sh"]
