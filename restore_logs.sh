@@ -18,7 +18,8 @@ echo "$(/usr/bin/curator --host $ES_HOST --quiet --loglevel ERROR show snapshots
 do 
  if [ "$la" != "" ];then
   echo "try restore $la"
-  curl -XPOST ${ES_HOST}:${ES_PORT}/_snapshot/${REPOSITORY}/${la}/_restore?wait_for_completion=true -H 'Content-Type: application/json' \
+  curl -s -XPOST ${ES_HOST}:${ES_PORT}/_snapshot/${REPOSITORY}/${la}/_restore?wait_for_completion=true -H 'Content-Type: application/json' \
   -d @/tmp/payload.json
  fi
 done
+echo "complete restore"

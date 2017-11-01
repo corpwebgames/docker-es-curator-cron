@@ -1,3 +1,3 @@
 #!/bin/sh
-echo "exec $1 with $ARGS"
+echo "run $1 with $ARGS"
 exec $1 $ARGS
