@@ -18,6 +18,9 @@ ENV CURATOR_EX_OPTS=
 ADD init-cron.sh /opt/
 RUN chmod +x /opt/init-cron.sh
 
+ADD restore_logs.sh /opt/
+RUN chmod +x /opt/restore_logs.sh
+
 ADD curator-runner.sh /opt/
 RUN chmod +x /opt/curator-runner.sh
 
